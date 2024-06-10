@@ -23,3 +23,8 @@ console.log(booleanIsLoggedIn)
     // 0 then false 
     // "" then false
     // "sdfgh" the true
+
+
+
+//operations in js
+
