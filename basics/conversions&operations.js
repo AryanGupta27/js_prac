@@ -2,8 +2,11 @@
 
 // alert(3+3) // thsi will not eork coz we are using node js not browser..
 
-// some primitive datatypes: int, string, boolean, null-> standalone value, symbol-> unique, undefined
+// some primitive datatypes: int, string, boolean, (null-> standalone value), (symbol-> unique), undefined, bigint
 
+// non primititve or referenced datatypes are: arrays, objects, functions
+
+//--------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 // type conversion:
 let score="fdghj";
@@ -25,6 +28,17 @@ console.log(booleanIsLoggedIn)
     // "sdfgh" the true
 
 
-
+//--------------------------------------------------------------------------------------------------------------------------------------------------------------
 //operations in js
+console.log("1"+2)
+console.log(1+"2")
+console.log(3+1+"2")
+console.log("1"+2+3)
 
+// Type of non primitive datatypes and null is always object. NOTE: type of function is function only(but it is object function)
+
+//--------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+// STACK(primitive datatypes)-> call by value
+// HEAP(non primitive datatype)-> call by reference
+ 
