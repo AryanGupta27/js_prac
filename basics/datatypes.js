@@ -39,14 +39,26 @@ arr2.push(100)
 // console.log(typeof newArr)
 
 // slice and splice(there is a important difference between them. Kindly look the output of both the function before & after using in array )
-console.log("A", arr2)
-const a=arr2.slice(1,3)
-console.log(a)
+// console.log("A", arr2)
+// const a=arr2.slice(1,3)
+// console.log(a)
 
-console.log("B", arr2)
-const b=arr2.splice(1,3)
-console.log(b)
+// console.log("B", arr2)
+// const b=arr2.splice(1,3)
+// console.log(b)
 
-console.log("C", arr2) // in this the all the elements that b array contains will be removed.
-// splice methods overwrites the origuinal array. 
+// console.log("C", arr2) // in this the all the elements that b array contains will be removed.
+// // splice methods overwrites the origuinal array. 
 
+const another_arr=[...arr1, ...arr2]; // spread operator is used to copy the elements from array
+console.log(another_arr)
+
+let f=[3,2,643,31,53,[4,43,2353,331,[25,80,7]]]
+console.log(f.flat(Infinity)) // flat concatenates all the sub-array elements; infinity is the parameter which is used as a depth
+
+
+console.log(Array.isArray("Hitesh")) // tells whether the given value is array or not
+console.log(Array.from("Hitesh")) // it converts the given value into array
+console.log(Array.from({name:"Hitesh"})) // this will not convert coz, this is an object.
+
+console.log(Array.of(1,2,3,4)) // this will convert the parameters passed into an array elements.
