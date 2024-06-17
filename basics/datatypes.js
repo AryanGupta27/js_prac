@@ -33,7 +33,7 @@ let arr2= new Array(7,6,34,53,63,25)
 arr2.push(100)
 // console.log(arr2)
 
-// let newArr=arr1.join()
+// let newArr=arr1.join() // join method returns an array as a string, it does not change the original array.
 // console.log(arr1)
 // console.log(newArr) // this is in string type
 // console.log(typeof newArr)
