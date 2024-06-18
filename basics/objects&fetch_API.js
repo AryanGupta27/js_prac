@@ -41,14 +41,49 @@ const obj3={...obj1, ...obj2} // to combine or copy the values of objects
 const obj4=Object.assign({}, obj1, obj2) // this method also copis the objects from source to destination
 // console.log(obj3)
 // console.log(obj4)
+
 //-------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-
 
 console.log(Object.keys(myObj)) // this will be very important for future purpose.(it is converting our data into array so now we can loop and access them easily)
 console.log(Object.values(myObj))
 console.log(Object.entries(myObj)) // thsi will each key-value into an array
 
+//NOTE: Data coming from the datatabse will be the array of objects, so we should know how to fetch the values from them.
 
+//-------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-//NOTE: Data cooming from the datatabse will be the array of objects, so we should know how to fetch the values from them.
+// Destructuring the objects
+
+const course={
+    cname:"MATHS",
+    instruct:"zxc",
+    price:111
+}
+
+console.log(course.cname) // this is the common way.
+
+const{cname}=course // this how we destructured a property from the object
+console.log(cname)// thus we can use only prop name
+// this above concept will be helpful in Reactjs.
+
+//-------------------------------------------------------------------------------------------------------------------------------------------------------------
+// calling an api
+// async function f1(){
+// const res= await fetch('https://randomuser.me/api/');
+// const ans=await res.json();
+
+// console.log(ans.info.version)
+// }
+// f1();
+
+// another method to call an api
+// function ap(){
+//     fetch('https://randomuser.me/api/')
+//     .then(function(raw){
+//         return raw.json()
+//     })    
+//     .then(function(data){
+//         console.log(data);
+//     })
+// }
+// ap();
