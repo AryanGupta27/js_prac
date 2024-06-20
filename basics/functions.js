@@ -35,3 +35,5 @@ function getVal(anyarray){
 getVal(arr1)
 // or we can pass an array itself
 getVal([100,200,300,410])
+
+
