@@ -1,6 +1,6 @@
-// "use strict" // treat all js codes as ne wer version
+// "use strict" // treat all js codes as newer version
 
-// alert(3+3) // thsi will not eork coz we are using node js not browser..
+// alert(3+3) // this will not work coz we are using node js not browser..
 
 // some primitive datatypes: int, string, boolean, (null-> standalone value), (symbol-> unique), undefined, bigint
 

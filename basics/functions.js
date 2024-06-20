@@ -13,7 +13,7 @@ function calculateSum(...val){ // ... here is working as a rest operator.
 console.log(calculateSum(200,500,700,600))
 //-------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-// passing objects into a fuunction
+// passing objects into a function
 const user1={
     username:'ary',
     price: 66

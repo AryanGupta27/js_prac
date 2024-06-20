@@ -8,10 +8,10 @@ const newname=new String("Aryyq-werty") // another way to declare a string. (thi
 // // there are various different methods/fucntions in js. we can get them on mdn docs or in browser console.
 // console.log(newname.charAt(2))
 // console.log(newname.indexOf('y'))
-// console.log(newname.slice(-10,7))
+console.log(newname.slice(1,7)) // takes certain part and return it.
 
 // console.log(newname.replace('A', 'Z'))
-// console.log(newname.split('-')) // this will split the string into array.
+// console.log(newname.split('-')) // this will split the string into array before and after the character we paased.
 //--------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 //DATE and TIME
@@ -48,13 +48,13 @@ arr2.push(100)
 // console.log(b)
 
 // console.log("C", arr2) // in this the all the elements that b array contains will be removed.
-// // splice methods overwrites the origuinal array. 
+// // splice methods overwrites the original array. 
 
 const another_arr=[...arr1, ...arr2]; // spread operator is used to copy the elements from array
 console.log(another_arr)
 
 let f=[3,2,643,31,53,[4,43,2353,331,[25,80,7]]]
-console.log(f.flat(Infinity)) // flat concatenates all the sub-array elements; infinity is the parameter which is used as a depth
+console.log(f.flat(Infinity)) // flat concatenates all the sub-array elements; infinity is the parameter which is used as a depth( how many level we have to go inside)
 
 
 console.log(Array.isArray("Hitesh")) // tells whether the given value is array or not
