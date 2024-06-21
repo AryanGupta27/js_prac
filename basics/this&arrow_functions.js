@@ -33,3 +33,17 @@ const afunc=()=>{
     console.log(this) // the output will be an empty object
 }
 afunc();
+
+// if we use {} these brackets then we have to use return keyword, but if we use () then return is not required.
+
+// const addTwo=(num1, num2)=>{ return num1+num2}
+// console.log(addTwo(4,5));
+
+// const addTwo=(num1, num2)=> num1+num2 // this is also correct
+// console.log(addTwo(4,5));
+
+const addTwo=(num1, num2)=> (num1+num2)  // this is also known as implicit return; and will be very helpful in react
+console.log(addTwo(4,5));
+
+const f2=()=>({user:"aryan"})
+console.log(f2())
