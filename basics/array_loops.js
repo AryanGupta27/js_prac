@@ -35,3 +35,7 @@ const arr2=['js','cpp','py','jv']
 arr2.forEach((element) => { // for each is a higher order function means it will always accept a callback function as a parameter.
     console.log(element)
 });
+
+arr2.forEach(function (item){
+    console.log(item)
+})
