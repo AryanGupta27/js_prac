@@ -11,8 +11,17 @@
         <div class="day">Tuesady</div>
         <div class="day">Wednesday</div>
         <div class="day">Thursday</div>
-
     </div>
+
+    <h1>Languages</h1>
+    <ul class="lang">
+        <li>Java</li>
+        <li>JS1</li>
+        <li>JS2</li>
+        <li>JS3</li>
+        <li>JS4</li>
+    </ul>
+
 </body>
 <script>
     const parent=document.querySelector('.parent')
@@ -37,7 +46,7 @@
     console.log("NODES: ", parent.childNodes)
 
 
-    //----------------------------------------------------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------------------------------------------------
     // creating a new element in DOM
     const div=document.createElement('div') // to create a new element
     console.log(div);
@@ -50,10 +59,43 @@
     // div.innerText="Aryan Gupta" // to set the text of div
 
     const addText=document.createTextNode("Aryan Gupta")
-    div.appendChild(addText) // these above two lines are another way to add a text to element
+    div.appendChild(addText) // these above two lines are another way to add a text to element; and this the optimal way.
 
     document.body.appendChild(div) // at last we are adding our element in body.
+//----------------------------------------------------------------------------------------------------------------------------
+    function addLanguages(langName){
+        const ele= document.createElement('li')
+        ele.innerHTML=langName;
+        document.querySelector('.lang').appendChild(ele)
+    }
+    addLanguages('CPP');
+
+    function OptimalWayToAddLanguage(langname){
+        const ele=document.createElement('li');
+        ele.appendChild(document.createTextNode(langname));
+
+        document.querySelector('.lang').appendChild(ele)
+    }
+    OptimalWayToAddLanguage('python')
+//----------------------------------------------------------------------------------------------------------------------------
+//NOTE: innerHTML and textcontent are kind of same thing
+
+    //Edit the values using DOM
+    const secondLang=document.querySelector('li:nth-child(2)')
+    console.log(secondLang)
+    // secondLang.innerHTML='nmcv' // one way to edit.
+
+    // another optimal way
+    const newele=document.createElement('li')
+    newele.textContent='nmcv'
+    // these above two lines are creating a new li element
+
+    secondLang.replaceWith(newele)
     
+    
+    // remove the value using DOM
+    const lastLang=document.querySelector('li:last-child')
+    lastLang.remove()
 
 </script>
 </html>
