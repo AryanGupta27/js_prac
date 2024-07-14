@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="head">Aryan Gupta</h1>
+    <button id="btn">Click</button>
+</body>
+<script>
+     const f1=function(){
+        document.querySelector('#head').innerHTML='GURUDEV';
+     }
+     
+     const change=setTimeout(f1,2000) // note: here we have given only the reference of the function.NOt executed the fucntion
+
+     document.querySelector('#btn').addEventListener('click', ()=>{
+        clearTimeout(change) // clear timeout will stop the setTimeout. We need to give the reference of the setTimout
+        console.log('STOPPED');
+     })
+</script>
+</html>
