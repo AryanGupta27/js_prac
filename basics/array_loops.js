@@ -93,6 +93,7 @@ console.log(ot)
 
 // map:- It also accepts a callback function(High order function).
  // it also returns a new array.
+ //does not change the original array.
 
  const finalArr=newArr.map((item)=>{
     return item+10; // this will add 10 on each item of array
@@ -110,7 +111,8 @@ console.log(nums)
 
 //----------------------------------------------------------------------------------------------------------------------------------------------------------------
 //reduce 
-
+//method returns a single value: the function's accumulated result.
+//method does not change the original array.
 const myNums=[1,2,3]
 
 const myTot=myNums.reduce((acc,currval)=>{ // acc is accumulator
