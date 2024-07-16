@@ -6,13 +6,44 @@
     <title>Document</title>
 </head>
 <style>
-
+#container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#insert{
+    height: 500px;
+    width: 500px;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+#text{
+    color: white;
+}
+.class{
+    color: white;
+    display: flex;
+    flex-direction: row;
+}
+table,th,td{
+    border: 1px solid white;
+}
 </style>
 <body>
     <button id="start">START</button>
     <button id="stop">STOP</button>
 
     
+    <div id="container">
+        <div id="insert">
+            <div id="text">Press any key</div>
+        </div>
+    </div>
+    
+
 </body>
 <script>
     // genrate a random color
@@ -29,7 +60,8 @@
     
     const start=document.querySelector('#start');
     const stop=document.querySelector('#stop');
-    let t1
+    let t1;
+
     const changeColor=function(){
         const v1=randomColor();
         // console.log(v1);
@@ -37,7 +69,9 @@
     }
     const automaticColorChange=function(){
         console.log('COLOR CHANGE STARTED')
-        t1 = setInterval(changeColor,1000);
+        if(!t1){
+            t1 = setInterval(changeColor,1000);
+        }
     }
 
     const stopColorChange=function(){
@@ -48,6 +82,30 @@
 
     start.addEventListener('click', automaticColorChange);
     stop.addEventListener('click', stopColorChange);
+
+
+
+//-----------------------------------------------------------------------------------------------------------------------------------------------------
+const insert=document.querySelector('#insert');
+window.addEventListener('keydown', (e)=>{
+    insert.innerHTML=`
+        <div class='color'>
+            <table>
+                <tr>
+                    <th> Key</th>
+                    <th> KeyCode</th>
+                    <th> Code</th>
+                </tr>
+                <tr>
+                    <td>${e.key===" " ? 'Space' : e.key}</td>
+                    <td>${e.keyCode}</td>
+                    <td>${e.code}</td>
+                </tr>
+            </table>
+        </div>    
+    `
+})
+
 
 </script>
 </html>
